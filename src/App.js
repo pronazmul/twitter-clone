@@ -1,5 +1,6 @@
-import React from 'react';
+import React from 'react'
+import Sidebar from './Components/Sidebar/Sidebar'
 
-const App = () => <h1>WElcome Claver Nazmul</h1>
+const App = () => <Sidebar/>
 
-export default App;
+export default App

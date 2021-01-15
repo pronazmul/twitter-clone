@@ -1,0 +1,12 @@
+.MuiSvgIcon-root{
+    padding:20px;
+}
+
+.MuiSvgIcon-root:hover{
+    cursor:pointer;
+    color: var(--twitter-color);
+    background-color: var(--twitter-background);
+    border-radius: 30px;
+    transition:100ms ease-out;
+}
+

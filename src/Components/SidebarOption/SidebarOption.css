@@ -13,7 +13,7 @@
 .sideBarOption:hover{
     cursor:pointer;
     color: var(--twitter-color);
-    background-color: var(--twitter-background);
+    background-color: var(--hover-background);
     border-radius: 30px;
     transition: 100ms ease-out;
 }

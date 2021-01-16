@@ -28,3 +28,20 @@ Use:
 ```sh
         <div className={`sideBarOption ${active && 'sideBarOption--active'}`}>
 ```
+
+## Hide Scrollbar from Chrome, Safari, Opera:
+
+```sh
+    .div::-webkit-scrollbar{
+        display:none;
+    }
+```
+
+## Hide Scrollbar from IE, Edge, Firefox:
+
+```sh
+    .div{
+        -ms-overflow-style:none;
+        scrollbar-width:none;
+    }
+```

@@ -7,9 +7,9 @@ import Widgets from '../Widgets/Widgets'
 const Main = () => {
     return (
         <div className="root-container">
-            <Sidebar/>
-            <Feed/>
-            <Widgets/>            
+            <Sidebar />
+            <Feed />
+            <Widgets />
         </div>
     )
 }

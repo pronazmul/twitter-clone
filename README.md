@@ -41,7 +41,41 @@ Use:
 
 ```sh
     .div{
-        -ms-overflow-style:none;
-        scrollbar-width:none;
+        -ms-overflow-style:none; /IE and Edge
+        scrollbar-width:none;   /Firefox
     }
+```
+
+## Twitter EmBed Plugin
+
+```sh
+    Command: npm install --save react-twitter-embed
+    Use:
+    import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed'
+
+
+
+    <TwitterTweetEmbed tweetId='1337268250778824704'/>
+
+    <TwitterTimelineEmbed
+    sourceType="profile"
+    screenName="pronazmul"
+    options={{height:400}}
+    />
+
+    <TwitterShareButton
+    url={"https//twitter.com/pronazmul"}
+    />
+
+```
+
+## Commands For Firebase:
+```sh
+    installation Command: npm i firebase
+    install Firebase CLI:  npm install -g firebase-tools
+    Sign in to Google: firebase login
+    Initiate your project: firebase init
+    When you’re ready, deploy your web app: firebase deploy
+
+    Copy Firebase SDK and inport To you Files
 ```

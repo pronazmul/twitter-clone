@@ -1,7 +1,7 @@
 import { Button } from '@material-ui/core'
 import { Explore, Home, MailOutline, MoreHoriz, Notifications, PermIdentity, Twitter } from '@material-ui/icons'
 import React from 'react'
-import SidebarOption from '../SidebarOption/SidebarOption'
+import SidebarOption from '../SidebarComponent/SidebarOption/SidebarOption'
 import './Sidebar.css'
 
 const Sidebar = () => {
@@ -14,7 +14,6 @@ const Sidebar = () => {
             <SidebarOption Icon={MailOutline} text='Message' />
             <SidebarOption Icon={PermIdentity} text='Profile' />
             <SidebarOption Icon={MoreHoriz} text='More' />
-
             {/* Tweet Button */}
             <Button varient='outlined' fullWidth className='tweet--button'>Tweet</Button>
         </div>

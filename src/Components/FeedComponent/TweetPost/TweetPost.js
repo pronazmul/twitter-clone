@@ -1,5 +1,5 @@
 import { Avatar } from '@material-ui/core'
-import { ChatBubbleOutline, FavoriteBorder, Publish, Repeat, VerifiedUser } from '@material-ui/icons'
+import { ChatBubbleOutline, Favorite, Publish, Repeat, VerifiedUser } from '@material-ui/icons'
 import React from 'react'
 import './TweetPost.css'
 
@@ -26,7 +26,7 @@ const TweetPost = ({data, VarifiedId}) => {
                 <img src={data.image} alt='' />
                 
                 <div className='post-footer'>
-                    <FavoriteBorder fontSize='small' />
+                    <span className='like-icon'><Favorite fontSize='small' />  {data.likes} likes</span>
                     <ChatBubbleOutline fontSize='small' />
                     <Repeat fontSize='small' />
                     <Publish fontSize='small' />

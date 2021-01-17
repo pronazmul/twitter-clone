@@ -48,3 +48,16 @@
     transition: 100ms ease-out;
 }
 
+.like-icon{
+    display: flex;
+    align-items: center;
+    padding:20px;
+    color: rgb(248, 101, 101) !important;
+}
+
+.like-icon > .MuiSvgIcon-root:hover{
+    cursor:pointer;
+    background-color: var(--hover-background);
+    border-radius: 30px;
+    transition: 100ms ease-out;
+}

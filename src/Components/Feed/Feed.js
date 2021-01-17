@@ -11,7 +11,7 @@ const Feed = () => {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        axios.get("https://dummyapi.io/data/api/post?limit=5", { headers: { 'app-id': '60041ffb57b278dfd93806e9' } })
+        axios.get("https://dummyapi.io/data/api/post?limit=10", { headers: { 'app-id': '60041ffb57b278dfd93806e9' } })
             .then(({ data }) => setPosts(data.data))
             .catch(console.error)
     }, [])

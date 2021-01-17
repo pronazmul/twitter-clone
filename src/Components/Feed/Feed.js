@@ -36,6 +36,22 @@ const Feed = () => {
                 image={posts.image}
                 avatar={posts.avatar}
             />
+            <TweetPost
+                displayName={posts.displayName}
+                userName={posts.userName}
+                varifiedId={posts.varifiedId}
+                text={posts.text}
+                image={posts.image}
+                avatar={posts.avatar}
+            />
+            <TweetPost
+                displayName={posts.displayName}
+                userName={posts.userName}
+                varifiedId={posts.varifiedId}
+                text={posts.text}
+                image={posts.image}
+                avatar={posts.avatar}
+            />
 
         </div>
     )

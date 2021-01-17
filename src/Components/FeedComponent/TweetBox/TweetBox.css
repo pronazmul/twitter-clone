@@ -4,6 +4,10 @@
     padding:10px 15px;
 }
 
+.tweetbox-input >input:focus {
+    outline:none !important;
+}
+
 .tweet-box > form{
     display: flex;
     flex-direction: column;
@@ -34,8 +38,23 @@
     
 }
 
-.tweetBox-imageInput{
-border:none;
-padding:10px;
-font-size: 16px;
+.tweet-input-button{
+display: flex;
+align-items: center;
+margin-left: 40px;
+}
+
+
+.tweet-input-icons> .MuiSvgIcon-root{
+    padding:15px;    
+    color: var(--twitter-color);
+    font-size: 24px;
+}
+
+.MuiSvgIcon-root:hover{
+    cursor:pointer;
+    color: var(--twitter-color);
+    background-color: var(--hover-background);
+    border-radius: 30px;
+    transition: 100ms ease-out;
 }

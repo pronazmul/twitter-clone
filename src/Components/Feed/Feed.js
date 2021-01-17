@@ -1,57 +1,35 @@
+import { Flare } from '@material-ui/icons'
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import TweetBox from '../FeedComponent/TweetBox/TweetBox'
 import TweetPost from '../FeedComponent/TweetPost/TweetPost'
-import firebaseApp from '../Firebase/firebaseConfig'
+// import firebaseApp from '../Firebase/firebaseConfig'
 import './Feed.css'
+
 
 const Feed = () => {
     const [posts, setPosts] = useState([])
 
-    useEffect(()=>{
-            const data = firebaseApp.database().ref("posts")
-            data.on("value", (snapshot)=>{
-                setPosts(snapshot.val()) 
-            })
+    useEffect(() => {
+        axios.get("https://dummyapi.io/data/api/post?limit=5", { headers: { 'app-id': '60041ffb57b278dfd93806e9' } })
+            .then(({ data }) => setPosts(data.data))
+            .catch(console.error)
+    }, [])
 
-    },[])
-    
     return (
         <div className='feed'>
             {/* Header */}
             <div className='feed-header'>
                 <h2>Home</h2>
+                <Flare className='feed-headerIcon'/>
             </div>
 
             {/* Tweet Box */}
             <TweetBox />
 
-            {/* ({ displayName, userName, VarifiedId, text, image, avatar }) */}
-
-            {/* Post */}
-            <TweetPost
-                displayName={posts.displayName}
-                userName={posts.userName}
-                varifiedId={posts.varifiedId}
-                text={posts.text}
-                image={posts.image}
-                avatar={posts.avatar}
-            />
-            <TweetPost
-                displayName={posts.displayName}
-                userName={posts.userName}
-                varifiedId={posts.varifiedId}
-                text={posts.text}
-                image={posts.image}
-                avatar={posts.avatar}
-            />
-            <TweetPost
-                displayName={posts.displayName}
-                userName={posts.userName}
-                varifiedId={posts.varifiedId}
-                text={posts.text}
-                image={posts.image}
-                avatar={posts.avatar}
-            />
+            {posts.map(post =>
+                <TweetPost data={post} VarifiedId></TweetPost>
+            )}
 
         </div>
     )

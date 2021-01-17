@@ -3,31 +3,32 @@ import { ChatBubbleOutline, FavoriteBorder, Publish, Repeat, VerifiedUser } from
 import React from 'react'
 import './TweetPost.css'
 
-const TweetPost = ({ displayName, userName, VarifiedId, text, image, avatar }) => {
+const TweetPost = ({data, VarifiedId}) => {
+    console.log(data)
     return (
         <div className='post'>
             <div className='post-avatar'>
-                <Avatar src={avatar} />
+                <Avatar src={data.owner.picture} />
             </div>
 
             <div className='post-body'>
                 <div className='post-header'>
                     <div className='post-headerText'>
-                        <h3>{displayName}
+                        <h3>{`${data.owner.firstName} ${data.owner.lastName}`}
                             {VarifiedId && <VerifiedUser className='verified-userBadge' />}
-                            <span className='light-text'>@{userName}</span>
+                            {<span className='light-text'>{data.publishDate}</span>}
                         </h3>
                     </div>
                     <div className='post-headerDescription'>
-                        <p>{text}</p>
+                        <p>{data.text}</p>
                     </div>
                 </div>
-                <img src={image} alt='' />
+                <img src={data.image} alt='' />
                 
                 <div className='post-footer'>
+                    <FavoriteBorder fontSize='small' />
                     <ChatBubbleOutline fontSize='small' />
                     <Repeat fontSize='small' />
-                    <FavoriteBorder fontSize='small' />
                     <Publish fontSize='small' />
                 </div>
             </div>

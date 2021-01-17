@@ -19,6 +19,9 @@
     background-color: var(--twitter-background);
 }
 
+.twitter-input > input:focus{
+    outline: none !important;
+}
 
 .widget-searchIcon{
     color: gray;

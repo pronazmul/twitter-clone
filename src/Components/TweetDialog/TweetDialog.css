@@ -1,6 +1,6 @@
 
-.tweet-box{
-    border-bottom: 4px solid var(--twitter-background); 
+
+.tweet-dialog-box{
     padding:10px 15px;
 }
 
@@ -8,7 +8,7 @@
     outline:none !important;
 }
 
-.tweet-box > form{
+.tweet-dialog-box > form{
     display: flex;
     flex-direction: column;
 }
@@ -41,14 +41,13 @@
 .tweet-input-button{
 display: flex;
 align-items: center;
-margin-left: 40px;
 }
 
 
 .tweet-input-icons> .MuiSvgIcon-root{
     padding:15px;    
     color: var(--twitter-color);
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .MuiSvgIcon-root:hover{
